@@ -3,6 +3,11 @@ import React, { useState } from 'react';
 
 const Calculator = () => {
     const [input, setInput] = useState('');
+
+    function handleClick (value){
+        setInput((prev) => prev + value);
+      };
+
   return (
     <div>
       <div className="display">{input}</div>
@@ -20,8 +25,8 @@ const Calculator = () => {
         <button onClick={() => handleClick('9')}>9</button>
         <button onClick={() => handleClick('*')}>*</button>
         <button onClick={() => handleClick('0')}>0</button>
-        <button onClick={() => handleClick(handleClear)}>C</button>
-        <button onClick={handleCalculate}>=</button>
+        <button /*onClick={() => handleClick(handleClear)}*/>C</button>
+        <button /*onClick={handleCalculate}*/>=</button> 
         <button onClick={() => handleClick('/')}>/</button>
       </div>
     </div>
